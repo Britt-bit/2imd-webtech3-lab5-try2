@@ -14,7 +14,7 @@ var app = express();
 const mongoose = require('mongoose');
 mongoose.connect("mongodb+srv://dbUser:Bv110100@lab5-eudnm.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, () => {
   console.log('connected to DB');
-})
+});
 
 
 // view engine setup
@@ -46,5 +46,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
